@@ -1,19 +1,17 @@
-<div class="col-md-6 p-3">
-  <div class="card rounded-0">
-    <div class="card-img-top position-relative rounded-0">
-      <img src="../../assets/Tile_Image.jpg" alt="Card Images">
-      <div class="card-img-overlay d-flex flex-column align-items-end">
-        <div class="card-buy-price d-flex align-items-center flex-column flex-grow-1">
-          <button type="button" class="btn">Buy Now</button>
-          <span>$7.50/ton</span>
-        </div>
-        <h4 class="card-title align-self-start mb-0">Kariba Redd+ - Zimbabwe</h4>
+<div class="card rounded-0">
+  <div class="card-img-top position-relative rounded-0">
+    <img src="../../assets/Tile_Image.jpg" alt="Card Images">
+    <div class="card-img-overlay d-flex flex-column align-items-end">
+      <div class="card-buy-price d-flex align-items-center flex-column flex-grow-1">
+        <button type="button" class="btn">Buy Now</button>
+        <span>$7.50/ton</span>
       </div>
+      <h4 class="card-title align-self-start mb-0">{{ project.name }}</h4>
     </div>
-    <div class="card-body">
-      <h5 class="card-sub-title">Reduced Emissions from Deforestation and Degradation</h5>
-      <span>957,842 Ibs. offset</span>
-      <p class="card-text">Protects forests and wildlife on the southern shores of Lake Kariba in Zimbabwe, forming a giant biodiversity corrido.</p>
-    </div>
+  </div>
+  <div class="card-body">
+    <h5 class="card-sub-title">{{ project.tagline }}</h5>
+    <span>957,842 Ibs. offset</span>
+    <p class="card-text">{{ project.description }}</p>
   </div>
 </div>

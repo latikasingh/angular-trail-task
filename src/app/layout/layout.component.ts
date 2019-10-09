@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClientService } from "../shared/http-client.service";
 
 @Component({
   selector: 'app-layout',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LayoutComponent implements OnInit {
 
-  constructor() { }
+  projects: any[];
+
+  constructor(private service: HttpClientService) { }
 
   ngOnInit() {
+    this.service.getProjects()
+      .then((projects) => {
+        this.projects = projects;
+      })
+      .catch((error) => {
+        console.error('Error : ', error);
+      });
   }
 
 }
