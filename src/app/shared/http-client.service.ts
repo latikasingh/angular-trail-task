@@ -9,7 +9,6 @@ export class HttpClientService {
   constructor(private http: HttpClient) { }
 
   getProjects() {
-    debugger
     return new Promise<any>((resolve, reject) => {
       // -- will be replaced with actul API Url
       const apiUrl = `\assets\\data.json`;
